@@ -38,9 +38,9 @@ class Base {
             boolean reachable2 = address2.isReachable(10000);
             boolean reachable3 = address2.isReachable(10000);
 
-            System.out.println("Is host reachable1? " + reachable1);
-            System.out.println("Is host reachable2? " + reachable2);
-            System.out.println("Is host reachable3? " + reachable3);
+            System.out.println("Is 127.0.0.1 reachable1? " + reachable1);
+            System.out.println("Is localhost reachable2? " + reachable2);
+            System.out.println("Is 0.0.0.0 reachable3? " + reachable3);
 
             String hostname1 = InetAddress.getLocalHost().getHostName();
             InetAddress hostname2 = InetAddress.getLocalHost();

@@ -60,8 +60,9 @@ class Base {
             System.out.println("socket3 isClosed: " + socket3.isClosed());
             System.out.println("socket3 isConnected: " + socket3.isConnected());
         } catch (Exception e) {
-            fail("oops");
+            System.out.println("error: " + e.toString());
             e.printStackTrace();
+            fail("oops");
         }
         // double r = Math.random();
         // if (r < 0.1) {

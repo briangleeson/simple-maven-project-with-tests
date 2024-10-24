@@ -26,6 +26,8 @@ package test;
 
 import static org.junit.Assert.*;
 import java.net.InetAddress;
+import java.io.IOException;
+import java.net.Socket;
 
 class Base {
 
@@ -46,6 +48,17 @@ class Base {
             InetAddress hostname2 = InetAddress.getLocalHost();
             System.out.println("hostname1: " + hostname1);
             System.out.println("hostname2: " + hostname2.toString());
+
+
+            Socket socket1 = new Socket("127.0.0.1", 9999);
+            Socket socket2 = new Socket("0.0.0.0", 9999);
+            Socket socket3 = new Socket("0.0.0.0", 9999);
+            System.out.println("socket1 isClosed: " + socket1.isClosed());
+            System.out.println("socket1 isConnected: " + socket1.isConnected());
+            System.out.println("socket2 isClosed: " + socket2.isClosed());
+            System.out.println("socket2 isConnected: " + socket2.isConnected());
+            System.out.println("socket3 isClosed: " + socket3.isClosed());
+            System.out.println("socket3 isConnected: " + socket3.isConnected());
         } catch (Exception e) {
             fail("oops");
             e.printStackTrace();

@@ -23,9 +23,9 @@ public class X {
             System.out.println("Is host reachable3? " + reachable3);
 
             String hostname1 = InetAddress.getLocalHost().getHostName();
-            String hostname2 = InetAddress.getLocalHost();
+            InetAddress hostname2 = InetAddress.getLocalHost();
             System.out.println("hostname1: " + hostname1);
-            System.out.println("hostname2: " + hostname2);
+            System.out.println("hostname2: " + hostname2.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
